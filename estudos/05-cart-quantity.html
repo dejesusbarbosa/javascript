@@ -59,33 +59,39 @@
     }
 
 </style>
-
+<head>
+    <title>Cart Quantity</title>
+</head>
 <body>
-    <div id="header">
-        <button id="in-header" title="This is a button!" onclick="alert('Good Job')">
-            Hello
-        </button>
-    </div>
-    
-    <div id="main">
-        <p>
-            Paragraph of text
-        </p>
-    </div>
-    
-        <div id="in-the-main">
-            <button id="in-main" title="This is a other button">Hello, again </button>
-        </div>
+    <button onclick="
+        console.log(`Cart Quantity: ${cartQuantity}`);
+        ">Show Quantity</button>
+
+    <button onclick="
+    //cartQuantity = cartQuantity + 1; dá para fazer isso
+
+    cartQuantity ++;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+    ">Add to cart</button>
+
+    <button onclick="
+    //cartQuantity = cartQuantity + 2; shortcut
+
+    cartQuantity += 2;
+    console.log(`cartQuantity: ${cartQuantity}`);
+    ">+2</button>
+
+    <button onclick="
+    cartQuantity = cartQuantity +3;
+    console.log(`cartQuantity: ${cartQuantity}`);
+    ">+3</button>
+
+    <button onclick="
+    cartQuantity = cartQuantity - cartQuantity
+    console.log(`cartQuantity: ${cartQuantity}`);
+    ">Reset cart</button>
     
     <script>
-        // This is just a comment.
-        // this comment create a poppup
-        alert('Hello!');
-    
-        /*
-            This is a multi
-            line
-            comment
-        */
+        let cartQuantity = 0;
     </script>
 </body>
