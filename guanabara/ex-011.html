@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+</head>
+<body>
+    <h1>País de origem</h1>
+    <input type="text" name="txtn1" id="txtn1">
+    <button onclick="Calcular()">Verificar</button>
+    <div id="res">
+
+    </div>
+
+    <script>
+        function Calcular() {
+        let txt = document.getElementById('txtn1')
+        let res = document.getElementById('res')
+        let país = (txt.value)
+
+        res.innerHTML = (`Seu país de origem é ${país} `)
+        
+
+        if (país === 'brasil') {
+            res.innerHTML += (`Você é brasileiro nato, muito brabo, gostei de tu mnr!`)
+        } else {
+            res.innerHTML += (`Você é paia, é estrangeirinho de bosta`)
+        }
+    }
+        
+    </script>
+</body>
+</html>
