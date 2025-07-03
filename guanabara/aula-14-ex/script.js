@@ -1,14 +1,31 @@
-function verificar() {
-let n1 = document.getElementById('txtn1')
-let n2 = document.getElementById('txtn2')
-let n3 = document.getElementById('txtn3')
-let res = document.getElementById('resultado')
+function contar() {
+    let ini = document.getElementById('txtn1')
+    let fim = document.getElementById('txtn2')
+    let passo = document.getElementById('txtn3')
+    let res = document.getElementById('res')
 
-let inicio = Number(n1.value)
-let fim = Number(n2.value)
-let passo = Number(n3.value)
+    if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
+        res.innerHTML = 'Ímposivel realizar a conta!'
+        window.alert('[ERRO] Preencha os dados!!')
+    } else {
+       res.innerHTML = 'contando..  <br>'
+       let i = Number(ini.value)
+       let f = Number(fim.value)
+       let p = Number(passo.value)
+       if (p <= 0 ) {
+        window.alert('Passo inválido! Considerando PASSO 1')
+       }
 
-while (inicio <= fim) {
-    res.innerHTML = `Você está no passo ${inicio}`
-}
+       // Contagem crescente
+       if (i < f) {
+        for (let c = i; c <= f; c += p) {
+            res.innerHTML += `${c} -->`
+            }
+       } else {
+        // Contagem decrescente
+        for(let c = i; c >= f; c-= p) {
+            res.innerHTML += `${c} --> `
+        }
+       }
+    }
 }
